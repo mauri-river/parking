@@ -33,7 +33,7 @@ public class VehiculoServi {
     }
     
     public Vehiculo consultarVehiculo(int id) {
-        Vehiculo v = rep.findById(id).get();
+        Vehiculo v = rep.findById(id).orElse(null);
         return v;
     }
     
